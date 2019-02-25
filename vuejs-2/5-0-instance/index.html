@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Vue.js instance</title>
+</head>
+<body>
+  <div id="app1">
+    <div id="generalData">
+      <h1 ref="description">{{ title }}</h1>
+      <button type="button" @click="loadArticle">Load Article</button>
+      <p v-if="loaded">A very serious abstract</p>
+    </div>
+  </div>
+  <div id="app2">
+    <template v-if="loaded">
+      <h2>A serious article title</h2>
+      <p>Read about serious science here.</p>
+    </template>
+  </div>
+  <div id="app3">
+    <template v-if="loaded">
+      <h3>{{ title }}</h3>
+      <blockquote cite="http://www.htmldog.com/references/html/tags/blockquote/">
+        <h1>HTML Tag: blockquote</h1>
+        <p>A block of text that is quoted from elsewhere.</p>
+      </blockquote>
+      <article>
+        <h4>Martian Mice Invade Ecuador</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum nunc eu hendrerit dictum. Aliquam iaculis ipsum a cursus ornare. Praesent eu interdum augue, sed suscipit sapien. Pellentesque efficitur laoreet magna, sagittis porttitor dui malesuada aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum at auctor leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris finibus orci quis tempus luctus. Nam in accumsan magna. Quisque dignissim tempor porta. Pellentesque porttitor metus urna, condimentum eleifend nunc dignissim eget. In ut leo vitae tellus efficitur maximus luctus id dui.</p>
+        <p>In id lectus id mauris pellentesque ultricies viverra tempor diam. Suspendisse tincidunt vehicula risus nec finibus. Morbi hendrerit, turpis eu pretium rutrum, nulla massa consequat nisi, non mollis erat purus quis mi. Donec ultrices ante quis vulputate vulputate. Sed ullamcorper libero sit amet odio tristique aliquam. Ut sed leo vel libero dignissim ultrices. Aenean lobortis nibh ac molestie malesuada. Sed ornare erat mauris, at congue felis eleifend vitae. Proin viverra condimentum lacinia. Aenean dignissim lobortis purus, non pellentesque magna pharetra eu. Sed ut diam laoreet, convallis orci vitae, pellentesque est. Mauris convallis nunc vitae magna bibendum commodo.</p>
+        <p>Phasellus sit amet dolor sed tellus faucibus pulvinar quis a est. Sed ante lorem, posuere id imperdiet eu, interdum cursus nibh. Donec ullamcorper sed libero in gravida. Maecenas fermentum, odio at tincidunt feugiat, diam diam sollicitudin mauris, et auctor mi tortor id massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin fringilla metus massa, quis molestie orci dignissim sed. Etiam non elementum dui. Pellentesque auctor, sapien et ullamcorper dignissim, orci urna faucibus orci, vitae luctus metus massa eu mauris. Suspendisse potenti. Phasellus diam nibh, cursus a mi sed, ornare rhoncus leo. Quisque commodo enim felis, vel vestibulum lectus dapibus lacinia. Vivamus porta velit et erat maximus consequat. Mauris vulputate augue eget placerat consequat. Integer tristique tristique finibus. Duis a turpis ac ligula laoreet mollis.</p>
+        <p>Sed luctus fermentum lacus et posuere. Nunc in convallis sapien. Mauris congue ligula nunc, nec tempor metus tempus sed. Morbi vitae dapibus magna, imperdiet aliquam massa. Maecenas finibus nulla ac risus consequat elementum. Sed ultricies libero ante. Aenean eu auctor augue.</p>
+      </article>
+    </template>
+  </div>
+</body>
+<script src="app.js" charset="utf-8"></script>
+</html>

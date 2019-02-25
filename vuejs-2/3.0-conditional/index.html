@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Conditionals</title>
+</head>
+<body>
+  <div id="app">
+    <p v-if="show">You can see me!</p>
+    <p v-else-if="secret">This is a secret.</p>
+    <p v-else="show">Now you see me!</p>
+    <p v-show="show">This shows conditionally but is always within DOM</p>
+    <template v-if="secret && show">
+      <p>This is also a secret.</p>
+    </template>
+    <button @click="show = !show">Toggle</button>
+    <button @click="secret = true">Show secret</button>
+    <span>Show: {{ show }}</span>
+    <span>Secret: {{ secret }}</span>
+  </div>
+</body>
+<script src="app.js" charset="utf-8"></script>
+</html>

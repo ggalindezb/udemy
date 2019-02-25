@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="app.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Attaching CSS</title>
+</head>
+<body>
+  <div id="app">
+    <div class="demo" @click="attachRed = !attachRed" :class="redColor"></div>
+    <div class="demo" @click="attachGreen = !attachGreen" v-bind:class="{green: attachGreen}"></div>
+    <div class="demo" :class="color"></div>
+    <hr>
+    <input type="text" v-model="color"/>
+  </div>
+</body>
+<script src="app.js" charset="utf-8"></script>
+</html>

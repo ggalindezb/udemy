@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Conditionals</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(ingredient, i) in ingredients">{{ ingredient }}(  {{ i }})</li>
+    </ul>
+    <template v-for="(ingredient, i) in ingredients">
+      <strong>{{ ingredient }}:</strong>
+      <span>{{ i }}</span>
+      <br>
+    </template>
+    <input type="text" @blur="setIngredient">
+    <button @click="addIngredient">Add</button>
+    <hr>
+    <template v-for="colitas in colas">
+      <h3>{{ colitas.name }}</h3>
+      <p>Age: {{ colitas.age }}</p>
+      <p>Color: {{ colitas.color }}</p>
+    </template>
+    <ul>
+      <li v-for="colitas in colas">
+        <div v-for="(value, key, index) in colitas">{{key}}: {{ value }} [{{ index }}] </div>
+      </li>
+    </ul>
+    <span v-for="n in 10"> {{ n }} |</span>
+  </div>
+</body>
+<script src="app.js" charset="utf-8"></script>
+</html>

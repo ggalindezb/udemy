@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Reactivity</title>
+</head>
+<body>
+  <div id="app">
+    <button v-on:click="counter++">Increase counter</button>
+    <button v-on:click="counter--">Decrease counter</button>
+    <button v-on:click="other++">Increase other</button>
+    <button v-on:click="other--">Decrease other</button>
+    <p>Counter: {{ counter}} | {{ other }}</p>
+    <p>Result: {{ result() }} | {{ output }}</p>
+  </div>
+</body>
+<script src="app.js" charset="utf-8"></script>
+</html>
